@@ -36,6 +36,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bg_border</background>
+    <background>background\bg_puzzle_borderSmall</background>
     <background>background\bg_title_name</background>
     <background>background\bg_title_testtiles</background>
     <background>background\bg_title_redtiles</background>
@@ -89,9 +90,11 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_01_title</room>
-    <room>rooms\rm_03_puzzle</room>
+    <room>rooms\rm_00_init_small</room>
     <room>rooms\rm_00_init</room>
+    <room>rooms\rm_03_puzzleSmall</room>
+    <room>rooms\rm_03_puzzle</room>
+    <room>rooms\rm_01_title</room>
     <room>rooms\rm_02_options</room>
   </rooms>
   <constants number="11">
@@ -105,7 +108,7 @@
     <constant name="EV_SHUFFLE">0</constant>
     <constant name="EV_SLIDE_FINISHED">1</constant>
     <constant name="PLAT_PC">0</constant>
-    <constant name="PLAT_DROID">1</constant>
+    <constant name="PLAT_ANDROID">1</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

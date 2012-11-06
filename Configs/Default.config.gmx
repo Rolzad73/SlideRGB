@@ -30,7 +30,7 @@
   <option_android_minor_version>0</option_android_minor_version>
   <option_android_orient_landscape>true</option_android_orient_landscape>
   <option_android_orient_portrait>true</option_android_orient_portrait>
-  <option_android_orientation>2</option_android_orientation>
+  <option_android_orientation>1</option_android_orientation>
   <option_android_package_company>roltekk</option_android_package_company>
   <option_android_package_domain>com</option_android_package_domain>
   <option_android_package_product>Slide_RGB</option_android_package_product>
@@ -148,7 +148,7 @@
   <option_quitkey>true</option_quitkey>
   <option_resolution>0</option_resolution>
   <option_savekey>true</option_savekey>
-  <option_scale>-1</option_scale>
+  <option_scale>0</option_scale>
   <option_scaleprogress>true</option_scaleprogress>
   <option_screenkey>True</option_screenkey>
   <option_screenshotkey>true</option_screenshotkey>
@@ -198,7 +198,7 @@
   <option_win8_store_logo>Configs\Default\Windows8\logos\logo50.png</option_win8_store_logo>
   <option_win8_texture_page>1024</option_win8_texture_page>
   <option_win8_wide_logo>Configs\Default\Windows8\logos\logo310.png</option_win8_wide_logo>
-  <option_windowcolor>clBlack</option_windowcolor>
+  <option_windowcolor>$00FF0049</option_windowcolor>
   <option_windows_build_version>0</option_windows_build_version>
   <option_windows_company_info>RolTekk</option_windows_company_info>
   <option_windows_copyright_info>RolTekk (c) 2012</option_windows_copyright_info>
