@@ -42,6 +42,10 @@
     <background>background\bg_title_redtiles</background>
     <background>background\bg_title_test</background>
     <background>background\bg_title_tiles_rgb</background>
+    <backgrounds name="test">
+      <background>background\bg_markers</background>
+      <background>background\bg_grid32</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -67,6 +71,7 @@
     <scripts name="rm_init">
       <script>scripts\scr_init_init.gml</script>
     </scripts>
+    <script>scripts\scr_exit_game.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="control">
@@ -91,13 +96,17 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_00_init_small</room>
-    <room>rooms\rm_00_init</room>
     <room>rooms\rm_03_puzzleSmall</room>
+    <room>rooms\rm_00_init</room>
     <room>rooms\rm_03_puzzle</room>
     <room>rooms\rm_01_title</room>
     <room>rooms\rm_02_options</room>
+    <room>rooms\rm_largest</room>
+    <room>rooms\rm_medium</room>
+    <room>rooms\rm_smallest</room>
+    <room>rooms\rm_smallest2</room>
   </rooms>
-  <constants number="11">
+  <constants number="13">
     <constant name="DIR_NOWHERE">0</constant>
     <constant name="DIR_UP">1</constant>
     <constant name="DIR_RIGHT">2</constant>
@@ -107,8 +116,10 @@
     <constant name="EMPTY_TILE_VALUE">0</constant>
     <constant name="EV_SHUFFLE">0</constant>
     <constant name="EV_SLIDE_FINISHED">1</constant>
-    <constant name="PLAT_PC">0</constant>
-    <constant name="PLAT_ANDROID">1</constant>
+    <constant name="DENSITY_LOW">0</constant>
+    <constant name="DENSITY_MED">1</constant>
+    <constant name="DENSITY_HIGH">2</constant>
+    <constant name="DENSITY_XHIGH">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
