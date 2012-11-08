@@ -45,6 +45,11 @@
     <backgrounds name="test">
       <background>background\bg_markers</background>
       <background>background\bg_grid32</background>
+      <background>background\bg_tile48</background>
+      <background>background\bg_tile64</background>
+      <background>background\bg_tile96</background>
+      <background>background\bg_tile128</background>
+      <background>background\bg_tile256</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -70,15 +75,18 @@
     </scripts>
     <scripts name="rm_init">
       <script>scripts\scr_init_init.gml</script>
+      <script>scripts\scr_build_titleroom.gml</script>
+      <script>scripts\scr_build_optionsroom.gml</script>
+      <script>scripts\scr_build_puzzleroom.gml</script>
     </scripts>
     <script>scripts\scr_exit_game.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="control">
       <object>objects\obj_control_parent</object>
+      <object>objects\obj_control_init</object>
       <object>objects\obj_control_title</object>
       <object>objects\obj_control_puzzle</object>
-      <object>objects\obj_control_init</object>
     </objects>
     <objects name="buttons">
       <object>objects\obj_button_parent</object>
@@ -95,18 +103,36 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_00_init_small</room>
+    <rooms name="initTests">
+      <room>rooms\rm_init_SXL_1600</room>
+      <room>rooms\rm_init_SXL_1200</room>
+      <room>rooms\rm_init_XL_720</room>
+      <room>rooms\rm_init_XL_540</room>
+      <room>rooms\rm_init_L_480</room>
+      <room>rooms\rm_init_M_320</room>
+      <room>rooms\rm_init_S_240</room>
+    </rooms>
     <room>rooms\rm_03_puzzleSmall</room>
     <room>rooms\rm_00_init</room>
     <room>rooms\rm_03_puzzle</room>
     <room>rooms\rm_01_title</room>
     <room>rooms\rm_02_options</room>
-    <room>rooms\rm_largest</room>
-    <room>rooms\rm_medium</room>
-    <room>rooms\rm_smallest</room>
-    <room>rooms\rm_smallest2</room>
+    <rooms name="scalingGrids">
+      <room>rooms\rm_largest</room>
+      <room>rooms\rm_smallest</room>
+      <room>rooms\rm_smallest2</room>
+      <room>rooms\rm_medium</room>
+    </rooms>
+    <rooms name="testResolutions">
+      <room>rooms\rm_testXperiaMini</room>
+      <room>rooms\rm_testHTCMagic</room>
+      <room>rooms\rm_testNexusOne</room>
+      <room>rooms\rm_testGalaxyNexus</room>
+      <room>rooms\rm_testAsusTransformer</room>
+      <room>rooms\rm_testNexus10</room>
+    </rooms>
   </rooms>
-  <constants number="13">
+  <constants number="14">
     <constant name="DIR_NOWHERE">0</constant>
     <constant name="DIR_UP">1</constant>
     <constant name="DIR_RIGHT">2</constant>
@@ -116,10 +142,11 @@
     <constant name="EMPTY_TILE_VALUE">0</constant>
     <constant name="EV_SHUFFLE">0</constant>
     <constant name="EV_SLIDE_FINISHED">1</constant>
-    <constant name="DENSITY_LOW">0</constant>
-    <constant name="DENSITY_MED">1</constant>
-    <constant name="DENSITY_HIGH">2</constant>
-    <constant name="DENSITY_XHIGH">3</constant>
+    <constant name="SCREEN_SMALL">0</constant>
+    <constant name="SCREEN_MEDIUM">1</constant>
+    <constant name="SCREEN_LARGE">2</constant>
+    <constant name="SCREEN_EXTRALARGE">3</constant>
+    <constant name="SCREEN_SUPEREXTRALARGE">4</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
