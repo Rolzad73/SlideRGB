@@ -33,7 +33,7 @@
   <option_android_orientation>1</option_android_orientation>
   <option_android_package_company>roltekk</option_android_package_company>
   <option_android_package_domain>com</option_android_package_domain>
-  <option_android_package_product>Slide_RGB</option_android_package_product>
+  <option_android_package_product>game.Slide_RGB</option_android_package_product>
   <option_android_pocketchange_enable>0</option_android_pocketchange_enable>
   <option_android_pocketchange_id></option_android_pocketchange_id>
   <option_android_set_device_id></option_android_set_device_id>

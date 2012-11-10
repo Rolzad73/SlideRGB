@@ -35,6 +35,21 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
+    <backgrounds name="screen_S">
+      <background>background\bg_puzzle_S</background>
+    </backgrounds>
+    <backgrounds name="screen_M">
+      <background>background\bg_puzzle_M</background>
+    </backgrounds>
+    <backgrounds name="screen_L">
+      <background>background\bg_puzzle_L</background>
+    </backgrounds>
+    <backgrounds name="screen_XL">
+      <background>background\bg_puzzle_XL</background>
+    </backgrounds>
+    <backgrounds name="screen_SXL">
+      <background>background\bg_puzzle_SXL</background>
+    </backgrounds>
     <background>background\bg_border</background>
     <background>background\bg_puzzle_borderSmall</background>
     <background>background\bg_title_name</background>
@@ -44,6 +59,7 @@
     <background>background\bg_title_tiles_rgb</background>
     <backgrounds name="test">
       <background>background\bg_markers</background>
+      <background>background\bg_grid16</background>
       <background>background\bg_grid32</background>
       <background>background\bg_tile48</background>
       <background>background\bg_tile64</background>
@@ -108,9 +124,9 @@
       <room>rooms\rm_init_SXL_1200</room>
       <room>rooms\rm_init_XL_720</room>
       <room>rooms\rm_init_XL_540</room>
-      <room>rooms\rm_init_L_480</room>
       <room>rooms\rm_init_M_320</room>
       <room>rooms\rm_init_S_240</room>
+      <room>rooms\rm_init_L_480</room>
     </rooms>
     <room>rooms\rm_03_puzzleSmall</room>
     <room>rooms\rm_00_init</room>
@@ -124,15 +140,18 @@
       <room>rooms\rm_medium</room>
     </rooms>
     <rooms name="testResolutions">
-      <room>rooms\rm_testXperiaMini</room>
-      <room>rooms\rm_testHTCMagic</room>
-      <room>rooms\rm_testNexusOne</room>
-      <room>rooms\rm_testGalaxyNexus</room>
-      <room>rooms\rm_testAsusTransformer</room>
-      <room>rooms\rm_testNexus10</room>
+      <room>rooms\rm_puzzle_S</room>
+      <room>rooms\rm_puzzle_M</room>
+      <room>rooms\rm_puzzle_L</room>
+      <room>rooms\rm_puzzle_XL_540</room>
+      <room>rooms\rm_puzzle_XL_720</room>
+      <room>rooms\rm_puzzle_SXL_1200</room>
+      <room>rooms\rm_puzzle_SXL_1600</room>
     </rooms>
   </rooms>
-  <constants number="14">
+  <constants number="16">
+    <constant name="DEPTH_PUZZLE_TILE">999</constant>
+    <constant name="DEPTH_PUZZLE_BORDER">1000</constant>
     <constant name="DIR_NOWHERE">0</constant>
     <constant name="DIR_UP">1</constant>
     <constant name="DIR_RIGHT">2</constant>
