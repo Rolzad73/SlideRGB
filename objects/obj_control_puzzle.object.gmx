@@ -118,10 +118,12 @@ if(shuffle_count_check &gt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Start Shuffling
-//show_debug_message("Start Shuffling");
+            <string>/// Start Shuffling
+
 shuffle_count_check = global.shuffle_count;
 global.current_slide_speed = global.shuffle_slide_speed;
+
+// send end slide event to start shuffling loop
 event_user(EV_SLIDE_FINISHED);
 
 </string>

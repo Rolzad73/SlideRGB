@@ -11,7 +11,10 @@ if(!global.sliding)
   switch(argument[0])
   {
     case DIR_UP:
-      //show_debug_message("swap DIR_UP");
+      // move "empty" tile
+      inst_tile = instance_find(obj_tile, global.tilePositions[global.empty_y, global.empty_x]);
+      inst_tile.y += global.tile_height;
+      
       // start moving tile instance
       inst_tile = instance_find(obj_tile, global.tilePositions[global.empty_y + 1, global.empty_x]);
       path_change_point(global.slide_path, 1, 0, -global.tile_height, global.current_slide_speed);
@@ -26,7 +29,10 @@ if(!global.sliding)
       global.empty_y += 1;
       break;
     case DIR_RIGHT:
-      //show_debug_message("swap DIR_RIGHT");
+      // move "empty" tile
+      inst_tile = instance_find(obj_tile, global.tilePositions[global.empty_y, global.empty_x]);
+      inst_tile.x -= global.tile_width;
+
       // start moving tile instance
       inst_tile = instance_find(obj_tile, global.tilePositions[global.empty_y, global.empty_x - 1]);
       path_change_point(global.slide_path, 1, global.tile_width, 0, global.current_slide_speed);
@@ -41,7 +47,10 @@ if(!global.sliding)
       global.empty_x -= 1;
       break;
     case DIR_DOWN:
-      //show_debug_message("swap DIR_DOWN");
+      // move "empty" tile
+      inst_tile = instance_find(obj_tile, global.tilePositions[global.empty_y, global.empty_x]);
+      inst_tile.y -= global.tile_height;
+
       // start moving tile instance
       inst_tile = instance_find(obj_tile, global.tilePositions[global.empty_y - 1, global.empty_x]);
       path_change_point(global.slide_path, 1, 0, global.tile_height, global.current_slide_speed);
@@ -56,7 +65,10 @@ if(!global.sliding)
       global.empty_y -= 1;
       break;
     case DIR_LEFT:
-      //show_debug_message("swap DIR_LEFT");
+      // move "empty" tile
+      inst_tile = instance_find(obj_tile, global.tilePositions[global.empty_y, global.empty_x]);
+      inst_tile.x += global.tile_width;
+
       // start moving tile instance
       inst_tile = instance_find(obj_tile, global.tilePositions[global.empty_y, global.empty_x + 1]);
       path_change_point(global.slide_path, 1, -global.tile_width, 0, global.current_slide_speed);

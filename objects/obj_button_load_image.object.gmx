@@ -50,11 +50,39 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Load image from disk puzzle
+            <string>/// Load image from disk puzzle
+
 event_inherited();
+var filename;
+
+
+// temporarily set default puzzle based on game size
+switch(global.game_size)
+{
+  case SCREEN_SMALL:
+    filename = "puzzle_S.png";
+    break;
+  case SCREEN_MEDIUM:
+    filename = "puzzle_M.png";
+    break;
+  case SCREEN_LARGE:
+    filename = "puzzle_L.png";
+    break;
+  case SCREEN_EXTRALARGE:
+    filename = "puzzle_XL.png";
+    break;
+  case SCREEN_SUPEREXTRALARGE:
+    filename = "puzzle_SXL.png";
+    break;
+}
+
+
+//filename = "puzzle_S.png";
+
+// load the image into the puzzle
 with(obj_control_puzzle)
 {
-  if(shuffle_count_check = 0){ scr_load_image(); }
+  if(shuffle_count_check = 0){ scr_load_image(filename); }
 }
 
 </string>

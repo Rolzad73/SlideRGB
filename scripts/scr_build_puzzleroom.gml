@@ -8,41 +8,39 @@ room_set_persistent(global.room_puzzle, false);
 
 // add control object
 // will have to rework that object's scripts for scaling
-//room_instance_add(global.room_puzzle, 0, 0, obj_control_puzzle);
+room_instance_add(global.room_puzzle, 0, 0, obj_control_puzzle);
 
 // add parent one for now just in case quiting is difficult (TODO : change to proper obj_control_puzzle)
-room_instance_add(global.room_puzzle, 0, 0, obj_control_parent);
+//room_instance_add(global.room_puzzle, 0, 0, obj_control_parent);
 
 // add background (just 16 grid for now)
 room_set_background(global.room_puzzle, 0, true, false, bg_grid16, 0, 0, true, true, 0, 0, 1);
 
 // for now (to test scaling) build a simple 4x4 grid in the middle
 // try adding 16 tiles of the correct size
-var scaledtile;
+//var scaledtile;
+
+// set all UI element size choices
 var puzzleBorder;
 switch(global.game_size)
 {
   case SCREEN_SMALL:
-    scaledtile = bg_tile48;
     puzzleBorder = bg_puzzle_S;
     break;
   case SCREEN_MEDIUM:
-    scaledtile = bg_tile64;
     puzzleBorder = bg_puzzle_M;
     break;
   case SCREEN_LARGE:
-    scaledtile = bg_tile96;
     puzzleBorder = bg_puzzle_L;
     break;
   case SCREEN_EXTRALARGE:
-    scaledtile = bg_tile128;
     puzzleBorder = bg_puzzle_XL;
     break;
   case SCREEN_SUPEREXTRALARGE:
-    scaledtile = bg_tile256;
     puzzleBorder = bg_puzzle_SXL;
     break;
 }
+
 
 // add puzzle border background
 room_tile_add(global.room_puzzle, puzzleBorder,
@@ -51,7 +49,7 @@ room_tile_add(global.room_puzzle, puzzleBorder,
   DEPTH_PUZZLE_BORDER);
 
 
-  
+/*
 // add test tiles
 var startX, startY;
 
@@ -68,6 +66,14 @@ for (i=0; i<4; i+=1){
       DEPTH_PUZZLE_TILE);
   }  
 }
+*/
+
+// temporarilay add image load button
+room_instance_add(global.room_puzzle, 0, 0, obj_button_load_image);
+
+// temporarilfy add the shuffle button
+room_instance_add(global.room_puzzle, 0, global.view_height_mid, obj_button_shuffle);
+
 
 
 

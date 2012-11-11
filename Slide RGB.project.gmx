@@ -3,11 +3,11 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
+  <datafiles number="6" name="datafiles">
     <datafile>
-      <name>tiles15.png</name>
+      <name>puzzle_15_S.png</name>
       <exists>-1</exists>
-      <size>2144</size>
+      <size>6385</size>
       <exportAction>2</exportAction>
       <exportDir></exportDir>
       <overwrite>0</overwrite>
@@ -19,19 +19,101 @@
           <CopyToMask>49226</CopyToMask>
         </Config>
       </ConfigOptions>
-      <filename>tiles15.png</filename>
+      <filename>puzzle_S.png</filename>
+    </datafile>
+    <datafile>
+      <name>puzzle_15_M.png</name>
+      <exists>-1</exists>
+      <size>6052</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>49226</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>puzzle_15_M.png</filename>
+    </datafile>
+    <datafile>
+      <name>puzzle_15_L.png</name>
+      <exists>-1</exists>
+      <size>12101</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>49226</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>puzzle_L.png</filename>
+    </datafile>
+    <datafile>
+      <name>puzzle_XL.png</name>
+      <exists>-1</exists>
+      <size>15374</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>49226</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>puzzle_XL.png</filename>
+    </datafile>
+    <datafile>
+      <name>puzzle_15_SXL.png</name>
+      <exists>-1</exists>
+      <size>48867</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>49226</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>puzzle_15_SXL.png</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_blanktile</sprite>
     <sprites name="buttons">
       <sprite>sprites\spr_button_load_image</sprite>
       <sprite>sprites\spr_button_quit</sprite>
       <sprite>sprites\spr_button_newgame</sprite>
       <sprite>sprites\spr_button_options</sprite>
       <sprite>sprites\spr_button_shuffle</sprite>
+    </sprites>
+    <sprites name="screen_S">
+      <sprite>sprites\spr_tileShape_S</sprite>
+    </sprites>
+    <sprites name="screen_M">
+      <sprite>sprites\spr_tileShape_M</sprite>
+    </sprites>
+    <sprites name="screen_L">
+      <sprite>sprites\spr_tileShape_L</sprite>
+    </sprites>
+    <sprites name="screen_XL">
+      <sprite>sprites\spr_tileShape_XL</sprite>
+    </sprites>
+    <sprites name="screen_SXL">
+      <sprite>sprites\spr_tileShape_SXL</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -120,19 +202,14 @@
   </objects>
   <rooms name="rooms">
     <rooms name="initTests">
+      <room>rooms\rm_init_S_240</room>
+      <room>rooms\rm_init_XL_540</room>
+      <room>rooms\rm_init_XL_720</room>
+      <room>rooms\rm_init_M_320</room>
+      <room>rooms\rm_init_L_480</room>
       <room>rooms\rm_init_SXL_1600</room>
       <room>rooms\rm_init_SXL_1200</room>
-      <room>rooms\rm_init_XL_720</room>
-      <room>rooms\rm_init_XL_540</room>
-      <room>rooms\rm_init_M_320</room>
-      <room>rooms\rm_init_S_240</room>
-      <room>rooms\rm_init_L_480</room>
     </rooms>
-    <room>rooms\rm_03_puzzleSmall</room>
-    <room>rooms\rm_00_init</room>
-    <room>rooms\rm_03_puzzle</room>
-    <room>rooms\rm_01_title</room>
-    <room>rooms\rm_02_options</room>
     <rooms name="scalingGrids">
       <room>rooms\rm_largest</room>
       <room>rooms\rm_smallest</room>
@@ -140,13 +217,19 @@
       <room>rooms\rm_medium</room>
     </rooms>
     <rooms name="testResolutions">
-      <room>rooms\rm_puzzle_S</room>
-      <room>rooms\rm_puzzle_M</room>
-      <room>rooms\rm_puzzle_L</room>
+      <room>rooms\rm_puzzle_S_240</room>
+      <room>rooms\rm_puzzle_M_320</room>
+      <room>rooms\rm_puzzle_L_480</room>
       <room>rooms\rm_puzzle_XL_540</room>
       <room>rooms\rm_puzzle_XL_720</room>
       <room>rooms\rm_puzzle_SXL_1200</room>
       <room>rooms\rm_puzzle_SXL_1600</room>
+    </rooms>
+    <rooms name="originalDev">
+      <room>rooms\rm_02_options</room>
+      <room>rooms\rm_03_puzzle</room>
+      <room>rooms\rm_01_title</room>
+      <room>rooms\rm_00_init</room>
     </rooms>
   </rooms>
   <constants number="16">

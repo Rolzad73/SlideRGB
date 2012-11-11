@@ -51,7 +51,7 @@
   </views>
   <instances/>
   <tiles>
-    <tile bgName="bg_puzzle_XL" x="372" y="92" w="536" h="536" xo="0" yo="0" id="10000251" name="inst_B40D54F0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_puzzle_XL" x="372" y="92" w="536" h="536" xo="0" yo="0" id="10000068" name="inst_B40D54F0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

@@ -1,5 +1,8 @@
 ///Application initialization
 
+// init randomizing
+randomize();
+
 //create screen density grid size
 globalvar screendensity;
 screendensity[SCREEN_SMALL] = 48;

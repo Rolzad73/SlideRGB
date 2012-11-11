@@ -1,4 +1,4 @@
-///Reset tile positions to solved state
+/// Reset tile positions to solved state
 
 var i, j;
 var inst_tile;
@@ -16,6 +16,6 @@ for (i=0; i<global.tile_count_y; i+=1){
   }
 }
 
-global.empty_x = 0;
-global.empty_y = 0
+global.empty_x = global.solved_empty_x;
+global.empty_y = global.solved_empty_y
 
